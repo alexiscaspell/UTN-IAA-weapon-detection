@@ -1,0 +1,7 @@
+FROM alexiscaspell/jupyter-docker_jupyter-hub
+
+COPY requirements.txt requirements.txt
+
+RUN pip install -r requirements.txt --upgrade pip
+
+CMD jupyterhub -f jupyterhub_config.py
